@@ -1,6 +1,7 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/controllers/user_controller.dart';
+import 'package:flutter_application_1/pages/home_page.dart';
 import 'package:flutter_application_1/pages/signup_page.dart';
 import 'package:get/get.dart';
 
@@ -88,6 +89,7 @@ class _LoginPageState extends State<LoginPage> {
                     buttonColor = Colors.green;
                     msg = "You are logged in";
                   });
+                  Get.off(HomePage());
                 } else {
                   setState(() {
                     buttonColor = Colors.red;

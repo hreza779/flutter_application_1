@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import '../controllers/user_controller.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
+  HomePage({super.key});
+  final data = Get.put(UserController()).getUserDate();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,20 +16,22 @@ class HomePage extends StatelessWidget {
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
       ),
-      body: const Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
+          Image.network('https://via.placeholder.com/400x200'),
           Text(
-            'Hello World!!',
-            style: TextStyle(
+            data['name'],
+            style: const TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 20,
             ),
           ),
           Text(
-            'this is my first app',
+            data['mobile'],
             style: TextStyle(
+              fontFamily: 'Hamid',
               fontWeight: FontWeight.bold,
               fontSize: 18,
             ),

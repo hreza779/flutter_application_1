@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/home_page.dart';
 import 'package:flutter_application_1/pages/signup_page.dart';
 
 import 'pages/login_page.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // چارچوب کلی برنامه
     return GetMaterialApp(
-      home: LoginPage(),
+      home: HomePage(),
     );
   }
 }
